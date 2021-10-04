@@ -72,19 +72,19 @@ trait ApiException{
         );
     }
 
-    // /**
-    //  * MOstra a resposta em json
-    //  */
-    // // protected function getResponse($message, $code, $status)
-    // // {
-    // //     return response()->json([
-    // //         "errors" =>[
-    // //             [
-    // //                 "status"=>$status,
-    // //                 "code"=>$code,
-    // //                 "message"=>$message
-    // //             ]
-    // //         ]
-    // //     ], 404);  
-    // // }    
+    /**
+     * MOstra a resposta em json
+     */
+    protected function getResponse($message, $code, $status)
+    {
+        return response()->json([
+            "errors" =>[
+                [
+                    "status"=>$status,
+                    "code"=>$code,
+                    "message"=>$message
+                ]
+            ]
+        ], 404);  
+    }    
 }

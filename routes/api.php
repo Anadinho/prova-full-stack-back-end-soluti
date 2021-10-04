@@ -33,6 +33,8 @@ Route::middleware(['apiJWT'])->group(function () {
     /** Listagem dos usuarios cadastrados, este rota serve de teste para verificar a proteção feita pelo jwt */
     Route::get('users','\App\Http\Controllers\UserController@index');
     Route::get('/users/{user}', [\App\Http\Controllers\UserController::class, 'show']);
+    Route::delete('/users/{user}', [\App\Http\Controllers\UserController::class, 'destroy']);
+    Route::put('/users/{user}', [\App\Http\Controllers\UserController::class, 'update']);
     // Daqui para baixo você pode ir adiciondo todas as rotas que deverão estar protegidas em sua API
 });
 

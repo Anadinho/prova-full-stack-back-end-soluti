@@ -21,8 +21,9 @@ class User extends JsonResource
             'cpf' => $this->cpf,
             'email'=> $this->email,
             'dataNascimento' => $this->dataNascimento,
-            'password' => $this->password,
+            // 'password' => $this->password,
             'endereco' => new Endereco($this->endereco)            
         ];
     }
+    
 }

@@ -16,10 +16,7 @@ class Users extends ResourceCollection
     public function toArray($request)
     {
         return [
-            'dados'=> $this->collection,
-            'links'=> [
-                'self' =>'testeCurso'
-            ]
+            'dados'=> $this->collection            
         ];
     }
 }
